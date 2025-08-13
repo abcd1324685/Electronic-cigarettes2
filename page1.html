@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <script src="bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet" />
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #fbdfc7;
+      color: #333333;
+      font-family: "Prompt", sans-serif;
+      padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      min-height: 100vh;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555555;
+      line-height: 1.8;
+    }
+
+    h3,
+    h4 {
+      line-height: 1.6;
+    }
+
+    h4 {
+      color: #373737;
+    }
+
+    @media (max-width: 576px) {
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+    }
+
+    .arrow-text {
+      display: inline-block;
+      padding: 2rem 4rem;
+      font-size: 1.5rem;
+      color: #7c7c7cc1;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s, transform 0.2s;
+      border-radius: 0.5rem;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .arrow-text:hover {
+      color: #555;
+      transform: scale(1.1);
+    }
+
+    #section1,
+    #section2,
+    #section3,
+    #section4,
+    #section5,
+    #section6,
+    #section7,
+    #section8,
+    #section9 {
+      display: none !important;
+      margin-top: 2rem;
+    }
+
+    #section1.active,
+    #section2.active,
+    #section3.active,
+    #section4.active,
+    #section5.active,
+    #section6.active,
+    #section7.active,
+    #section8.active,
+    #section9.active {
+      display: block !important;
+    }
+
+
+
+    .submit-btn {
+      background-color: #333;
+      /* สีเทาเข้ม */
+      color: white;
+      /* ตัวอักษรสีขาว */
+      border: 2px solid #333;
+      /* เส้นขอบสีเดียวกับพื้น */
+      font-weight: 600;
+      font-size: 1.25rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: none;
+      /* ไม่มีเงา */
+    }
+
+    .submit-btn:hover {
+      background-color: rgb(125, 124, 124);
+      color: #333;
+      border-color: #333;
+      cursor: pointer;
+    }
+
+    .submit-btn:active {
+      background-color: #555;
+      color: white;
+      border-color: #555;
+      transform: scale(0.98);
+    }
+
+
+
+    #section3 form {
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 12px;
+      user-select: text;
+      cursor: auto;
+
+    }
+
+    #section3 form label {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    #section3 form input,
+    #section3 form select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: "Prompt", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ส่วนที่ 1 -->
+  <div class="container text-center py-4" id="section1">
+    <img src="smok.png" class="img-fluid mb-4" alt="No Smoke Logo" style="max-height: 150px;" />
+
+    <h2 class="fw-bold mb-4" style="color: #222222;">
+      ผลของโปรแกรม SOC ทำพิชิตชีวิตไร้ควัน
+    </h2>
+
+    <h4 class="my-4 quote">
+      "บุหรี่ไม่ใช่แค่เรื่องส่วนตัว แต่กระทบต่อสุขภาพและคนรอบข้าง<br />
+      ชีวิตสอนให้เราเห็นการป้องกันสำคัญกว่าการแก้ไข"
+    </h4>
+
+    <h5 class="mt-4">
+      *เนื้อหาในเว็บนี้เป็นผลงานการออกแบบการสื่อสาร<br />
+      ให้ความรู้ผ่านการให้ผู้เล่นมีส่วนร่วมในการตอบคำถาม
+    </h5>
+
+    <div class="mt-5">
+      <a href="#" id="nextBtn1" class="arrow-text">&gt;&gt;&gt;</a>
+    </div>
+  </div>
+
+  <!-- ส่วนที่ 2 -->
+  <div class="container text-center py-4" id="section2">
+    <h2 class="fw-bold mt-5" style="color: #222222;">
+      งานนี้เป็นส่วนหนึ่งของวิจัย
+    </h2>
+    <h2 class="my-2 quote">
+      “ผลของเกม SOC
+      ท้าพิชิตชีวิตไร้ควันต่อทัศนคติและพฤติกรรม<br />
+      การป้องกันการสูบบุหรี่ไฟฟ้าในนักเรียนชั้นมัธยมศึกษาตอนต้น”
+    </h2>
+
+    <h4 class="mt-5">
+      โดยนักศึกษาพยาบาลชั้นปีที่ 3<br />
+      วิทยาลัยพยาบาลบรมราชชนนีแพร่
+    </h4>
+
+    <div class="mt-5">
+      <a href="#" id="nextBtn2" class="arrow-text">แตะเพื่อไปต่อ</a>
+    </div>
+  </div>
+
+  <!-- ส่วนที่ 3 -->
+  <div id="section3" class="container">
+    <h3 class="fw-bold mb-4 text-center" style="color: #222222;">กรุณากรอกข้อมูลของคุณ</h3>
+    <form>
+      <div class="mb-3">
+        <label for="nameInput" class="form-label">ชื่อ</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="กรอกชื่อของคุณ" required />
+      </div>
+      <div class="mb-3">
+        <label for="ageInput" class="form-label">อายุ</label>
+        <input type="number" class="form-control" id="ageInput" placeholder="กรอกอายุของคุณ" min="1" max="120"
+          required />
+      </div>
+      <div class="mb-3">
+        <label for="genderSelect" class="form-label">เพศ</label>
+        <select class="form-select" id="genderSelect" required>
+          <option value="" selected disabled>เลือกเพศ</option>
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 submit-btn mt-3">แตะเพื่อไปต่อ</button>
+    </form>
+  </div>
+
+  <!-- ส่วนที่ 4 -->
+  <div class="container text-center mt-5" id="section4"><br><br><br><br>
+    <h1 class="fw-bold mt-5" style="color: #222222;">
+      กิจกรรมให้ความรู้เกี่ยวกับบุหรี่ไฟฟ้า
+    </h1>
+    <div class="mt-5">
+      <a href="#" id="nextBtn4" class="arrow-text">แตะเพื่อไปต่อ</a>
+    </div>
+  </div>
+
+
+  <!-- ส่วนที่ 5 -->
+  <div class="container text-center pt-5" id="section5" style="max-width: 700px;">
+    <h1 class="fw-bold my-4" style="color: #222222;">
+      บุหรี่ไฟฟ้า
+    </h1>
+    <div class="mb-4 p-3 rounded-3 border border-dark">
+      <p class="fs-5 mb-0">
+        <span class="text-danger fw-bold">บุหรี่ไฟฟ้า</span>
+        คือผลิตภัณฑ์ยาสูบรูปแบบใหม่ที่ใช้แบตเตอรี่ทำให้เกิดความร้อนเพื่อระเหยน้ำยาในบุหรี่ไฟฟ้าให้เป็นละอองลอยโดยไม่มีการเผาไหม้
+        ผู้สูบบุหรี่ไฟฟ้าจะสูดละอองลอยผ่านระบบทางเดินหายใจ ในน้ำยาบุหรี่ไฟฟ้ามีสารเคมีสำคัญหลายชนิด ได้แก่
+      </p>
+    </div>
+
+    <div class="mb-4 p-3 rounded-3 border border-dark">
+      <p class="fs-5 mb-0">
+        <span class="text-danger fw-bold">นิโคติน</span> เป็นสารเสพติดที่เพิ่มการหลั่งของสารโดปามีนในสมอง
+        ทำให้ผู้สูบบุหรี่ไฟฟ้าเสพติด และมีผลต่อร่างกายในการเพิ่มความดันโลหิตและเพิ่มอัตราการเต้นของหัวใจ
+        ทำให้หัวใจทำงานหนักขึ้น เสี่ยงต่อหัวใจวายเฉียบพลัน สำหรับในเด็กและวัยรุ่น สมองยังเจริญเติบโตไม่เต็มที่
+        นิโคตินมีผลต่อพัฒนาการทางสมอง
+      </p>
+    </div>
+    <div class="mt-5">
+      <!-- <a href="#" id="nextBtn5" class="arrow-text">ไปต่อ</a> -->
+    </div>
+  </div>
+
+  <!-- ส่วนที่ 6 -->
+  <div class="container py-4" id="section6" style="max-width: 700px;">
+    <div class="mb-4 p-3 rounded-3 border border-dark">
+      <p class="fs-5 mb-0">
+        <span class="text-danger fw-bold">🔥 สารปรุงแต่งกลิ่นรสชาติ</span><br>
+        ในน้ำยาบุหรี่ไฟฟ้ามีสารปรุงแต่งกลิ่นรสชาติมากกว่า 15,000 ชนิด เพื่อจูงใจให้เยาวชนอยากลองสูบบุหรี่ไฟฟ้า
+        สารปรุงแต่งกลิ่นรสชาติจะทำให้เกิดการระคายเคืองของปอดที่เรียกว่าป๊อปคอร์น ลัง
+        โดยเฉพาะกลิ่นอบเชยและเชอรี่จะมีอันตรายมากที่สุด
+      </p>
+    </div>
+
+    <div class="mb-4 p-3 rounded-3 border border-dark">
+      <p class="fs-5 mb-0">
+        <span class="text-danger fw-bold">💧 กลีเซอรีน</span><br>
+        เป็นสารที่ใช้เป็นตัวทำละลายกลิ่นรสชาติในบุหรี่ไฟฟ้า
+      </p>
+    </div>
+
+    <div class="mb-4 p-3 rounded-3 border border-dark">
+      <p class="fs-5 mb-0">
+        <span class="text-danger fw-bold">⚠️ โพลีไพลีนไกลคอล</span><br>
+        เป็นผลิตภัณฑ์ในกลุ่มอาหารและยา นำมาใช้เป็นตัวทำละลายยาทา ยาฉีด และเครื่องสำอาง รวมถึงเป็นส่วนผสมของอาหาร
+        ผู้ผลิตน้ำยาบุหรี่ไฟฟ้าใช้สารตัวนี้เพื่อทำให้เกิดควัน
+        เมื่อสารตัวนี้ถูกทำให้ระเหยในบุหรี่ไฟฟ้าและถูกสูดผ่านระบบทางเดินหายใจ จะเป็นอันตรายต่อปอด
+      </p>
+    </div>
+
+    <div class="mt-5 text-center">
+      <!-- <a href="#" id="nextBtn6" class="arrow-text">ไปต่อ</a> -->
+    </div>
+  </div>
+
+
+  <!-- ส่วนที่ 7 -->
+  <div class="container text-center py-4" id="section7">
+    <div class="my-5 p-4 rounded-3"
+      style="background: linear-gradient(135deg, #fcefe3, #f8e6d1); border: 1.5px solid #f1c5a0;">
+      <p class="mb-0" style="color: #5a3f2b; font-weight: 700; font-size: 1.25rem; line-height: 1.7;">
+        ในความเป็นจริงบุหรี่ไฟฟ้ามีอันตราย ทำให้ปอดอักเสบอย่างรุนแรง แม้จะสูบบุหรี่ไฟฟ้าในเวลาเพียงไม่กี่ปี
+        ดังนั้นเยาวชนจะต้องดูแลปกป้องตนเองไม่ให้ตกเป็นเหยื่อเสพติดนิโคตินในบุหรี่ไฟฟ้า รู้จักรักและเห็นคุณค่าในตนเอง
+        และรู้จักหลักการปฏิเสธที่มีประสิทธิภาพ
+      </p>
+    </div>
+    <div class="mt-5">
+      <!-- <a href="#" id="nextBtn7" class="arrow-text">ไปต่อ</a> -->
+    </div>
+  </div>
+
+  <!-- ส่วนที่ 8 -->
+  <div class="container text-center py-4" id="section8">
+    <h2 class="fw-bold mt-5" style="color: #222222;">
+      เข้าใจบ่
+    </h2>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <button id="btnUnderstand" type="button" class="btn btn-outline-success fw-semibold me-5"
+        style="min-width: 140px; border-radius: 8px; padding: 0.75rem 2rem; font-size: 1.25rem;">
+        เข้าใจ
+      </button>
+      <button id="btnNotUnderstand" type="button" class="btn btn-outline-danger fw-semibold"
+        style="min-width: 140px; border-radius: 8px; padding: 0.75rem 2rem; font-size: 1.25rem;">
+        ไม่เข้าใจ
+      </button>
+    </div>
+
+    <div class="mt-5">
+      <!-- <a href="#" id="nextBtn8" class="arrow-text">ไปต่อ</a> -->
+    </div>
+  </div>
+
+  <!-- ส่วยที่9 -->
+<div class="container text-center py-5" id="section9" style="max-width: 700px; margin-top: 3rem; border: 2px dashed #a67c00; border-radius: 12px; background: #fff8e1;">
+  <h2 class="fw-bold mb-4" style="color: #8b6d00; font-size: 2rem;">
+    แล้วหลักการปฏิเสธที่มีประสิทธิภาพ<br />
+    น้องๆคิดว่าเป็นแบบไหนล่ะ ??
+  </h2>
+
+
+  <h4 class="fw-semibold mt-5" style="color: #b38600;">
+    โปรดติดตามกิจกรรมครั้งต่อไปน้าาา <span style="font-size: 1.5rem;">✨</span>
+  </h4>
+</div>
+
+
+  <script>
+    // เริ่มต้นแสดง section1
+    document.getElementById('section1').classList.add('active');
+
+    function setupNextButton(nextBtnId, currentSectionId, nextSectionId) {
+      document.getElementById(nextBtnId).addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById(currentSectionId).classList.remove('active');
+        document.getElementById(nextSectionId).classList.add('active');
+      });
+    }
+
+    setupNextButton('nextBtn1', 'section1', 'section2');
+    setupNextButton('nextBtn2', 'section2', 'section3');
+    setupNextButton('nextBtn4', 'section4', 'section5');
+    // setupNextButton('nextBtn5', 'section5', 'section6');
+    // setupNextButton('nextBtn6', 'section6', 'section7');
+    // setupNextButton('nextBtn7', 'section7', 'section8');
+    // setupNextButton('nextBtn8', 'section8', 'section9');
+
+    // กำหนด event submit สำหรับฟอร์มที่ section3
+    const form = document.querySelector('#section3 form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        document.getElementById('section3').classList.remove('active');
+        document.getElementById('section4').classList.add('active');
+      } else {
+        form.reportValidity();
+      }
+    });
+
+    // แตะพื้นที่ว่างเพื่อไปต่อ (skip) ยกเว้นตอนกรอกฟอร์ม
+    document.body.addEventListener('click', function (e) {
+      const activeSectionIds = [
+        'section1', 'section2', 'section3', 'section4', 'section5',
+        'section6', 'section7', 'section8', 'section9'
+      ];
+
+      const nextBtns = activeSectionIds
+        .map(id => document.querySelector(`#${id} .arrow-text`))
+        .filter(el => el !== null);
+
+      // ถ้าแตะปุ่ม next หรืออยู่ในฟอร์ม ไม่ต้องทำอะไร
+      if (
+        nextBtns.some(btn => btn.contains(e.target)) ||
+        form.contains(e.target)
+      ) {
+        return;
+      }
+
+      // หาดูว่าตอนนี้อยู่ section ไหน active
+      let currentIndex = activeSectionIds.findIndex(id => document.getElementById(id).classList.contains('active'));
+      if (currentIndex === -1) return;
+
+      // ถ้าอยู่ section3 (ฟอร์ม) ห้ามแตะพื้นที่ว่างข้ามไป ////////////////////////////////////////////////////
+      if (activeSectionIds[currentIndex] === 'section3') {
+        return;
+      }
+      if (activeSectionIds[currentIndex] === 'section8') {
+        return;
+      }
+      if (activeSectionIds[currentIndex] === 'section9') {
+        return;
+      }
+
+      // ซ่อน section ปัจจุบัน
+      document.getElementById(activeSectionIds[currentIndex]).classList.remove('active');
+
+      // แสดง section ถัดไป
+      if (currentIndex + 1 < activeSectionIds.length) {
+        document.getElementById(activeSectionIds[currentIndex + 1]).classList.add('active');
+      }
+    });
+
+    document.getElementById('btnUnderstand').addEventListener('click', function () {
+  
+      document.getElementById('section8').classList.remove('active');
+      document.getElementById('section9').classList.add('active');
+    });
+
+
+    document.getElementById('btnNotUnderstand').addEventListener('click', function () {
+      document.getElementById('section8').classList.remove('active');
+      document.getElementById('section4').classList.add('active');
+    });
+  </script>
+
+</body>
+
+</html>
